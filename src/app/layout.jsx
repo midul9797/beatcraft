@@ -29,12 +29,8 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${leagueGothic.variable} ${geistSans.variable} ${geistMono.variable}`}
     >
-      <body className="overflow-x-hidden bg-main-dark">
-        <main>
-          {children}
-
-          <ViewCanvas />
-        </main>
+      <body>
+        <main>{children}</main>
       </body>
     </html>
   );

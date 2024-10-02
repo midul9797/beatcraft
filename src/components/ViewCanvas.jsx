@@ -28,6 +28,7 @@ export default function ViewCanvas({}) {
         gl={{ antialias: true }}
         camera={{
           fov: 30,
+          position: [0, 0, 5],
         }}
       >
         <Suspense fallback={null}>

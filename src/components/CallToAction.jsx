@@ -37,7 +37,7 @@ export default function CallToAction() {
           just for you.
         </p>
         <Link
-          href="/customize"
+          href="/customization"
           className="inline-block px-6 py-3 text-lg font-semibold bg-main-light text-main-dark rounded-md hover:bg-white transition duration-300"
         >
           Get Started Now

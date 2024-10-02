@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -68,7 +69,7 @@ export default function CustomizationProcess() {
         </div>
         <div className="text-center">
           <Link
-            href="/customize"
+            href="/customization"
             className="inline-block px-6 py-3 text-lg font-semibold bg-main-light text-main-dark rounded-md hover:bg-white transition duration-300"
           >
             Try the Customization Tool Now

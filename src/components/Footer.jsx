@@ -36,7 +36,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/customize"
+                  href="/customization"
                   className="hover:text-white transition duration-300"
                 >
                   Customization Tool

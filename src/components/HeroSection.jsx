@@ -126,7 +126,7 @@ const HeroSection = () => {
               </div>
 
               <Link
-                href="/customize"
+                href="/customization"
                 className="hero-button w-fit mt-12 px-6 py-3 text-lg font-semibold bg-main-light text-main-dark rounded-3xl hover:bg-white transition duration-300"
               >
                 Customize
