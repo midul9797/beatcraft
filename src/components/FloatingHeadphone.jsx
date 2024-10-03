@@ -28,7 +28,7 @@ const FloatingHeadphone = forwardRef(
           floatingRange={floatingRange}
         >
           {children}
-          <Headphone />
+          <Headphone page="home" />
         </Float>
       </group>
     );

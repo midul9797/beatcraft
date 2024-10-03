@@ -31,7 +31,7 @@ const ViewHeadphone = () => {
       <directionalLight position={[-10, -5, -10]} intensity={1} />
       <Center>
         <group position={[-2, -8, 0]} scale={0.3}>
-          <Headphone />
+          <Headphone page="customization" />
         </group>
       </Center>
       <OrbitControls makeDefault />

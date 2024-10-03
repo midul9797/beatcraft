@@ -1,12 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-main-dark sticky top-0 z-50">
+    <div className="bg-main-dark sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold text-main-light">
@@ -16,18 +17,18 @@ const Navbar = () => {
         {/* Menu Items */}
         <div className="hidden md:flex space-x-8 items-center">
           <a
-            href="#why-customize"
+            href="#features"
             className="text-main-light relative w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-main-light after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
           >
             Features
           </a>
 
-          <a
-            href="#customize"
+          <Link
+            href="/customization"
             className="text-main-light relative w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-main-light after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
           >
             Customize
-          </a>
+          </Link>
           <a
             href="#faq"
             className="text-main-light relative w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-main-light after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
@@ -36,18 +37,18 @@ const Navbar = () => {
           </a>
 
           {/* Call-to-Action Button */}
-          <a
-            href="#cta"
+          <Link
+            href="/login"
             className="bg-main-light text-main-dark px-4 py-2 rounded hover:bg-opacity-30 hover:text-main-light transition duration-300"
           >
             Login
-          </a>
-          <a
-            href="#cta"
+          </Link>
+          <Link
+            href="/signup"
             className="bg-main-light text-main-dark px-4 py-2 rounded hover:bg-opacity-30 hover:text-main-light transition duration-300"
           >
             Signup
-          </a>
+          </Link>
         </div>
 
         {/* Hamburger Menu for Mobile */}
@@ -125,7 +126,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 

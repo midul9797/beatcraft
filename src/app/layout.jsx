@@ -29,9 +29,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${leagueGothic.variable} ${geistSans.variable} ${geistMono.variable}`}
     >
-      <body>
-        <main>{children}</main>
-      </body>
+      {children}
     </html>
   );
 }

@@ -1,8 +1,9 @@
 "use client";
 
-import { useFBO, useGLTF, useTexture } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
-import { useState } from "react";
+import { useStore } from "@/zustand/store";
+import { useGLTF, useTexture } from "@react-three/drei";
+import { useFrame, useLoader } from "@react-three/fiber";
+import { useEffect, useState } from "react";
 import * as THREE from "three";
 
 useGLTF.preload("/assets/headphones/headphone.glb");
@@ -13,24 +14,56 @@ const metalMaterial = new THREE.MeshStandardMaterial({
   color: "#bbbbbb",
 });
 
-export function Headphone({ scale = 0.1, ...props }) {
+export function Headphone({ scale = 0.1, page = "home", ...props }) {
   const { nodes, materials } = useGLTF("/assets/headphones/headphone.glb");
-  const [color, setColor] = useState("red");
-  materials.Headpad.color = new THREE.Color("#7B3F00");
-  materials["Headband.001"].color = new THREE.Color("#7B3F00");
+  const { colors, tempColors, activePart } = useStore();
 
-  // Fixes upside down labels
-  //   labels.strawberryLemonade.flipY = false;
-  //   labels.blackCherry.flipY = false;
-  //   labels.watermelon.flipY = false;
-  //   labels.grape.flipY = false;
-  //   labels.lemonLime.flipY = false;
+  useEffect(() => {
+    console.log(materials.Headpad);
+    if (page === "home") {
+      const fixedColors = {
+        headband: "#000000",
+        cushions: "#CCCCCC",
+        speakerCups: "#333333",
+        slider: "#666666",
+        innerCushions: "#FFFFFF",
+        headpad: "#FFFFFF",
+      };
+      materials.Headpad.color = new THREE.Color(fixedColors.headpad);
+      materials["Headband.001"].color = new THREE.Color(fixedColors.headband);
+      materials.Cushions.color = new THREE.Color(fixedColors.cushions);
+      materials.Inner_Cushions.color = new THREE.Color(
+        fixedColors.innerCushions
+      );
+      materials.Speaker_cups.color = new THREE.Color(fixedColors.speakerCups);
+      materials.Slider.color = new THREE.Color(fixedColors.slider);
+    } else {
+      materials.Headpad.color = new THREE.Color(
+        activePart === "headpad" ? tempColors.headpad : colors.headpad
+      );
 
-  //   const label = labels[flavor];
-  // useFrame((state, delta) => {
+      materials["Headband.001"].color = new THREE.Color(
+        activePart === "headband" ? tempColors.headband : colors.headband
+      );
+      materials.Cushions.color = new THREE.Color(
+        activePart === "cushions" ? tempColors.cushions : colors.cushions
+      );
+      materials.Inner_Cushions.color = new THREE.Color(
+        activePart === "innerCushions"
+          ? tempColors.innerCushions
+          : colors.innerCushions
+      );
+      materials.Speaker_cups.color = new THREE.Color(
+        activePart === "speakerCups"
+          ? tempColors.speakerCups
+          : colors.speakerCups
+      );
+      materials.Slider.color = new THREE.Color(
+        activePart === "slider" ? tempColors.slider : colors.slider
+      );
+    }
+  }, [page, materials, colors, tempColors, activePart]);
 
-  //   }
-  // });
   return (
     <group {...props} dispose={null} scale={scale} rotation={[0, -Math.PI, 0]}>
       <mesh

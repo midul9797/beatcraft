@@ -11,8 +11,10 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <HeroSection />
-      <Features />
+      <HeroSection />\
+      <div id="features">
+        <Features />
+      </div>
       <CustomizationProcess />
       <Reviews />
       <CallToAction />
