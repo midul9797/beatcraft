@@ -15,29 +15,29 @@ const Navbar = () => {
         </div>
 
         {/* Menu Items */}
-        <div className="hidden md:flex space-x-8 items-center">
+        <div className="hidden md:flex space-x-8 items-center mr-[5vw]">
           <a
             href="#features"
-            className="text-main-light relative w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-main-light after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+            className="text-main-light font-bold relative w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-main-light after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
           >
             Features
           </a>
 
           <Link
             href="/customization"
-            className="text-main-light relative w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-main-light after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+            className="text-main-light font-bold relative w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-main-light after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
           >
             Customize
           </Link>
           <a
             href="#faq"
-            className="text-main-light relative w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-main-light after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
+            className="text-main-light font-bold relative w-fit block after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-main-light after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
           >
             FAQs
           </a>
 
           {/* Call-to-Action Button */}
-          <Link
+          {/* <Link
             href="/login"
             className="bg-main-light text-main-dark px-4 py-2 rounded hover:bg-opacity-30 hover:text-main-light transition duration-300"
           >
@@ -48,7 +48,7 @@ const Navbar = () => {
             className="bg-main-light text-main-dark px-4 py-2 rounded hover:bg-opacity-30 hover:text-main-light transition duration-300"
           >
             Signup
-          </Link>
+          </Link> */}
         </div>
 
         {/* Hamburger Menu for Mobile */}
@@ -96,12 +96,12 @@ const Navbar = () => {
         >
           Features
         </a>
-        <a
-          href="#customize"
+        <Link
+          href="/customization"
           className="block mx-auto text-main-light px-4 py-2 relative w-fit after:block after:content-[''] after:absolute after:h-[1.5px] after:bg-main-light after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-left"
         >
           Customize
-        </a>
+        </Link>
 
         <a
           href="#faq"
@@ -111,7 +111,7 @@ const Navbar = () => {
         </a>
 
         {/* Mobile CTA Button */}
-        <div className="flex flex-col space-y-2 items-center">
+        {/* <div className="flex flex-col space-y-2 items-center">
           <a
             href="#cta"
             className=" bg-main-light text-main-dark px-4 py-2 mt-2 rounded hover:bg-opacity-30 hover:text-main-light transition duration-300"
@@ -124,7 +124,7 @@ const Navbar = () => {
           >
             Signup
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -9,22 +9,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
-    name: "Alex Johnson",
+    name: "Dakota Johnson",
     quote:
       "These custom headphones are a game-changer. The comfort and sound quality are unmatched!",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "https://i.pravatar.cc/100?img=38",
   },
   {
     name: "Sarah Lee",
     quote:
       "I love how I could tailor every aspect of my headphones. They are perfect for my needs.",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "https://i.pravatar.cc/100?img=21",
   },
   {
     name: "Mike Brown",
     quote:
       "The customization process was fun and easy. The end result exceeded my expectations.",
-    image: "/placeholder.svg?height=100&width=100",
+    image: "https://i.pravatar.cc/100?img=61",
   },
 ];
 

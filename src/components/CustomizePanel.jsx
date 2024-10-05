@@ -63,7 +63,7 @@ const CustomizePanel = () => {
         {presetColors.map((color) => (
           <button
             key={color}
-            className="w-8 h-8 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-4 h-4 md:w-5 md:h-5 lg:w-7 lg:h-7 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             style={{ backgroundColor: color }}
             onClick={() => handleColorChange(part, color)}
           />
@@ -71,13 +71,13 @@ const CustomizePanel = () => {
         {customColors[part]?.map((color) => (
           <button
             key={color}
-            className="w-8 h-8 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-4 h-4 md:w-5 md:h-5 lg:w-7 lg:h-7 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
             style={{ backgroundColor: color }}
             onClick={() => handleColorChange(part, color)}
           />
         ))}
         <button
-          className="w-8 h-8 rounded-full border text-main-light  border-gray-300 focus:outline-none focus:ring-2 focus:ring-main-light bg-transparent text-xl font-bold flex items-center justify-center"
+          className="w-4 h-4 md:w-5 md:h-5 lg:w-7 lg:h-7 rounded-full border text-main-light  border-gray-300 focus:outline-none focus:ring-2 focus:ring-main-light bg-transparent text-sm md:text-base lg:text-md font-bold flex items-center justify-center"
           onClick={() => setActivePart(activePart === part ? null : part)}
         >
           +
@@ -123,7 +123,7 @@ const CustomizePanel = () => {
         className={`md:hidden ${
           isOpen ? "bg-black/30 h-screen shadow-lg" : "bg-transparent h-[30px]"
         }  fixed top-0 block w-full 
-          mx-auto px-4 py-8 z-50`}
+          mx-auto px-4 py-8 z-50 overflow-y-scroll`}
       >
         <div className="w-full md:hidden flex items-center z-100 justify-end">
           <button

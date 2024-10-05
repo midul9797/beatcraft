@@ -96,29 +96,29 @@ const HeroSection = () => {
     <div className="mx-auto flex w-full max-w-7xl flex-col items-center">
       <div className="hero opacity-0">
         {isDesktop && (
-          <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen md:block">
+          <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen lg:block">
             <HeroSectionScene />
           </View>
         )}
 
-        <div className="grid w-[60%]">
-          <div className="grid h-screen xs:ml-10 md:ml-20 lg:ml-30 mt-10">
-            <div className="grid auto-rows-min ">
-              <h1 className="hero-header text-[100px] font-black uppercase leading-[.8] text-main-light  lg:text-[140px]">
+        <div className="grid w-full md:w-[60%] text-center md:text-left">
+          <div className="grid items-center h-[80vh] lg:h-screen xs:ml-10 md:ml-20 lg:ml-30">
+            <div className="grid auto-rows-min">
+              <h1 className="hero-header text-[60px] font-black uppercase leading-[.8] text-main-light md:text-[100px]  lg:text-[120px]">
                 <TextSplitter
                   text={"Your Headsets"}
                   // wordDisplayStyle="block"
                   className="hero-header-word"
                 />
               </h1>
-              <h1 className="hero-subheading mt-10 text-[60px] font-black uppercase leading-[.8] text-main-light  lg:text-[80px]">
+              <h1 className="hero-subheading mt-5 text-[40px] font-black uppercase leading-[.8] text-main-light md:text-[60px] lg:text-[80px]">
                 <TextSplitter
                   text={"Your Style"}
                   // wordDisplayStyle="block"
                   // className="hero-header-word"
                 />
               </h1>
-              <div className="hero-body mt-12 text-main-light text-xl font-sans font-thin w-[70%]">
+              <div className="hero-body mt-8 text-main-light text-md md:text-lg lg:text-xl font-sans font-thin w-[100%] md:w-[70%]">
                 <p>
                   Craft the perfect listening experience with fully customizable
                   headphones. Comfort, sound, and style tailored to you.
@@ -127,37 +127,37 @@ const HeroSection = () => {
 
               <Link
                 href="/customization"
-                className="hero-button w-fit mt-12 px-6 py-3 text-lg font-semibold bg-main-light text-main-dark rounded-3xl hover:bg-white transition duration-300"
+                className="hero-button w-fit mt-8 px-6 py-3 mx-auto md:mx-0 text-base md:text-md lg:text-lg font-semibold bg-main-light text-main-dark rounded-3xl hover:bg-white transition duration-300"
               >
                 Customize
               </Link>
             </div>
           </div>
 
-          <div className="text-side relative z-[80] grid h-[70vh] ml-20">
+          <div className="text-side relative z-[80] grid h-[70vh] items-center md:ml-10 lg:ml-20 ">
             <div className="space-y-4">
-              <p className="text-side-heading text-balance text-2xl font-black uppercase text-main-light lg:text-5xl">
+              <p className="text-side-heading text-balance text-3xl font-black uppercase text-main-light md:4xl lg:text-5xl">
                 Why Customize?
               </p>
-              <ul className="list-none list-inside space-y-2 pl-8">
-                <li className="text-body text-balance text-xl font-normal text-main-light">
+              <ul className="list-none list-inside space-y-2 md:pl-8">
+                <li className="text-body text-balance text-md md:text-lg lg:text-xl font-normal text-main-light">
                   <TextSplitter text={"Personal fit for maximum comfort"} />
                 </li>
-                <li className="text-body text-balance text-xl font-normal text-main-light">
+                <li className="text-body text-balance text-md md:text-lg lg:text-xl font-normal text-main-light">
                   <TextSplitter
                     text={
                       "Tailored sound profiles for unique audio experiences"
                     }
                   />
                 </li>
-                <li className="text-body text-balance text-xl font-normal text-main-light">
+                <li className="text-body text-balance text-md md:text-lg lg:text-xl font-normal text-main-light">
                   <TextSplitter
                     text={
                       "Express your personal style with colors, materials, and engravings"
                     }
                   />
                 </li>
-                <li className="text-body text-balance text-xl font-normal text-main-light">
+                <li className="text-body text-balance text-md md:text-lg lg:text-xl font-normal text-main-light">
                   <TextSplitter
                     text={
                       "Replaceable components for sustainability and longevity"

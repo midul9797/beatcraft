@@ -51,26 +51,32 @@ export default function CustomizationProcess() {
   return (
     <section className="py-16 bg-main-dark text-main-light">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <h2 className=" text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">
+          How It Works
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8  mb-8 md:mb-12">
           {steps.map((step, index) => (
             <div
               key={step.number}
               ref={(el) => (processRef.current[index] = el)}
               className="flex flex-col items-center text-center"
             >
-              <div className="w-12 h-12 rounded-full bg-main-light text-main-dark flex items-center justify-center text-xl font-bold mb-4">
+              <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-main-light text-main-dark flex items-center justify-center text-md md:text-lg lg:text-xl font-bold mb-4">
                 {step.number}
               </div>
-              <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-              <p className="text-muted-foreground">{step.description}</p>
+              <h3 className="text-md md:text-lg lg:text-xl font-semibold mb-2">
+                {step.title}
+              </h3>
+              <p className="text-muted-foreground text-sm md:text-base">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>
         <div className="text-center">
           <Link
             href="/customization"
-            className="inline-block px-6 py-3 text-lg font-semibold bg-main-light text-main-dark rounded-md hover:bg-white transition duration-300"
+            className="inline-block px-6 py-3 text-base md:text-lg font-semibold bg-main-light text-main-dark rounded-md hover:bg-white transition duration-300"
           >
             Try the Customization Tool Now
           </Link>

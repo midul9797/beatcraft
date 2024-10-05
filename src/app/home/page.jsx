@@ -6,16 +6,16 @@ import CustomizationProcess from "@/components/CustomizationProcess";
 import Reviews from "@/components/Reviews";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
 
 const Home = () => {
   return (
     <>
       <Navbar />
       <HeroSection />\
-      <div id="features">
-        <Features />
-      </div>
+      <Features />
       <CustomizationProcess />
+      <FAQ />
       <Reviews />
       <CallToAction />
       <Footer />
